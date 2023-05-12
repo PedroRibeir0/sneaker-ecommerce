@@ -1,0 +1,119 @@
+.main{
+    margin-top: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 100px;
+
+    .brand{
+        color: $orange;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 13px;
+        letter-spacing: 2px;
+    }
+
+    .product-name{
+        color: $very-dark-blue;
+        font-size: 30px;
+    }
+
+    .product-descripition{
+        color: $dark-grayish-blue;
+        font-weight: 500;
+    }
+
+    .prices{
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        div{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .current-price{
+            color: $very-dark-blue;
+            font-size: 27px;
+            font-weight: 700;
+        }
+
+        .discount{
+            color: $orange;
+            font-weight: 700;
+            font-size: 16px;
+            background-color: $pale-orange;
+            padding: 5px 9px;
+            border-radius: 5px; 
+        }
+
+        .old-price{
+            font-size: 16px;
+            text-decoration: line-through;
+            color: $grayish-blue;
+            font-weight: 700;
+        }
+    }
+
+    .buttons{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .amount{
+        user-select: none;
+        background-color: $light-grayish-blue;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 700;
+        font-size: 18px;
+        height: 55px;
+        padding: 0 20px;
+        border-radius: 10px;
+        color: $very-dark-blue;
+
+        .minus-plus{
+            font-size: 28px;
+            color: $orange;
+
+            &:active{
+                transform: scale(0.83);
+            }
+        }
+    }
+    
+    .add-cart-button{
+        background-color: $orange;
+        border: none;
+        display: inline;
+        height: 55px;
+        border-radius: 10px;
+        color: $white;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        font-size: 17px;
+        box-shadow: 0 5px 20px 5px rgba(255, 60, 0, 0.3);
+
+        .cart-icon{
+            font-size: 23px;
+        }
+
+        &:hover{
+            background-color: lighten($color: $orange, $amount: 8);
+        }
+
+        &:active{
+            transform: scale(0.98);
+        }
+    }
+}

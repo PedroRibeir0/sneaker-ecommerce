@@ -1,0 +1,90 @@
+
+
+header{
+    color: $very-dark-blue;
+    padding: 13px 20px;
+    display: flex;
+    background-color: $white;
+    align-items: center;
+    justify-content: space-between;
+
+    div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+
+    h2{
+        font-size: 30px;
+        font-weight: 700;
+        user-select: none;
+    }
+
+    .header-icons{
+        font-size: 23px;
+        cursor: pointer;
+    }
+
+    .menu-icon{
+        font-size: 26px;
+        color: $dark-grayish-blue;
+        z-index: 1000;
+        cursor: pointer;
+    }
+
+    #cart-icon{
+        position: relative;
+    }
+
+    #cart-icon::after{
+        font-size: 10px;
+        font-weight: 700;
+        position: absolute;
+        bottom: 13px;
+        left: 13px;
+        content: attr(data-number);
+        color: $white;
+        background-color: $orange;
+        width: 15px;
+        height: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+
+    .menu-container{
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        position: absolute;
+        background-color: $white;
+        top: 0;
+        left: 0;
+        padding-top: 90px;
+        padding-left: 20px;
+        width: 60%;
+        height: 100%;
+        gap: 21px;
+        box-shadow: 37px 0 77px 77px rgba(0, 0, 0, 0.1);
+
+        .menu-opt{
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: 700;
+            user-select: none;
+
+            &:hover{
+                color: $grayish-blue;
+            }
+        }
+    }
+}
+
+@keyframes showMenu {
+    0%{
+        transform: translateX(-100%);
+    }    
+}
