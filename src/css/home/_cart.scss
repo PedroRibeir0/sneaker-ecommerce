@@ -1,0 +1,97 @@
+.cart-container{
+    background-color: $white;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    top: 75px;
+    transform: translateX(-50%);
+    border-radius: 10px;
+
+    .cart-txt{
+        color: $very-dark-blue;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 700;
+        font-size: 16px;
+        padding: 20px;
+        border-bottom: 1px solid $grayish-blue;
+        user-select: none;
+
+        .close-icon{
+            font-size: 19px;
+        }
+    }
+
+    .item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        color: $dark-grayish-blue;
+        font-weight: 500;
+
+        .item-thumbnail{
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+        }
+
+        .item-info{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            .item-prices{
+                display: flex;
+                gap: 8px;
+            }
+
+            .full-price{
+                font-weight: 700;
+                color: $very-dark-blue;
+            }
+        }
+        .trash-icon{
+            color: $grayish-blue;
+            font-size: 19px;
+            cursor: pointer;
+
+            &:active{
+                transform: scale(0.93);
+            }
+        }
+    }
+
+    .no-items{
+        text-align: center;
+        color: $dark-grayish-blue;
+        font-weight: 500;
+        margin-top: 15px;
+        font-size: 18px;
+    }
+
+    .checkout-button{
+        background-color: $orange;
+        margin: 15px;
+        margin-bottom: 30px;
+        height: 55px;
+        color: $white;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+
+        &:hover{
+            background-color: lighten($color: $orange, $amount: 8);
+        }
+
+        &:active{
+            transform: scale(0.98);
+        }
+    }
+}

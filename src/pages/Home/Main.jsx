@@ -1,6 +1,7 @@
 import Buttons from "./Buttons"
 
-export default function Main() {
+export default function Main(props) {
+
   return (
     <section className="main">
         <span className="brand">sneaker company</span>
@@ -13,7 +14,12 @@ export default function Main() {
             </div>
             <span className="old-price">$250.00</span>
         </div>
-        <Buttons/>
+        <Buttons 
+          amount={props.amount}
+          minus={props.minus}
+          plus={props.plus}
+          sendToCart={props.sendToCart}
+        />
     </section>
   )
 }
