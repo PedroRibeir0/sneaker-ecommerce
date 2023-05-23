@@ -8,22 +8,52 @@ header{
     align-items: center;
     justify-content: space-between;
 
-    div{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 15px;
+    @media screen and (min-width: 550px){
+        padding: 20px;
+    }
+    @media screen and (min-width: 768px){
+        padding: 25px 20px;
     }
 
-    h2{
+    @media screen and (min-width: 1024px){
+        border-bottom: 1px solid lighten($color: $grayish-blue, $amount: 15);
+        padding-bottom: 40px;
+        margin-bottom: 80px;
+    }
+
+    div{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 15px;
+        width: max-content;
+        @media screen and (min-width: 768px){
+            gap: 20px;
+        }
+        @media screen and (min-width: 1024px){
+            gap: 30px;
+        }
+        
+    }
+
+    .logo{
         font-size: 30px;
         font-weight: 700;
         user-select: none;
+        @media screen and (min-width: 768px){
+            font-size: 38px;
+        }
+        @media screen and (min-width: 1024px){
+            order: 1;       
+        }
     }
 
     .header-icons{
         font-size: 23px;
         cursor: pointer;
+        @media screen and (min-width: 768px){
+            font-size: 30px;
+        }
     }
 
     .menu-icon{
@@ -31,6 +61,12 @@ header{
         color: $dark-grayish-blue;
         z-index: 1000;
         cursor: pointer;
+        @media screen and (min-width: 768px){
+            font-size: 35px;
+        }
+        @media screen and (min-width: 1024px){
+            display: none;
+        }
     }
 
     #cart-icon{
@@ -53,6 +89,12 @@ header{
         justify-content: center;
         border-radius: 50%;
         cursor: pointer;
+        @media screen and (min-width: 768px){
+            width: 20px;
+            height: 20px;
+            bottom: 19px;
+            left: 18px;
+        }
     }
 
     .menu-container{
@@ -70,12 +112,35 @@ header{
         height: 100%;
         gap: 21px;
         box-shadow: 37px 0 77px 77px rgba(0, 0, 0, 0.1);
+        @media screen and (min-width: 768px){
+            width: 50%;
+            padding-top: 120px;
+        }
+        @media screen and (min-width: 1024px){
+            display: flex;
+            position: relative;
+            flex-direction: row;
+            background-color: transparent;
+            box-shadow: none;
+            order: 2;
+            padding: 0;
+            margin-left: 50px;
+        }
 
         .menu-opt{
             cursor: pointer;
             font-size: 20px;
             font-weight: 700;
             user-select: none;
+            @media screen and (min-width: 768px){
+                font-size: 27px;
+            }
+
+            @media screen and (min-width: 1024px){
+                font-size: 17px;
+                font-weight: 500;
+                color: $dark-grayish-blue;
+            }
 
             &:hover{
                 color: $grayish-blue;

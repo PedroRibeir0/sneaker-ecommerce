@@ -33,9 +33,17 @@ export default function Images() {
   }
 
   return (
-    <section className="images" style={backgroundImage}>
-        <GrFormPrevious className='icons' onClick={previousImage}/>
-        <GrFormNext className='icons' onClick={nextImage}/> 
+    <section className='images-container'>
+      <div className="main-image" style={backgroundImage}>
+          <GrFormPrevious className='icons' onClick={previousImage}/>
+          <GrFormNext className='icons' onClick={nextImage}/> 
+      </div>
+      <div className='carrosel'>
+        <img className='carrosel-thumbnail' src="../src/assets/images/image-product-1-thumbnail.jpg" alt="" />
+        <img className='carrosel-thumbnail' src="../src/assets/images/image-product-2-thumbnail.jpg" alt="" />
+        <img className='carrosel-thumbnail' src="../src/assets/images/image-product-3-thumbnail.jpg" alt="" />
+        <img className='carrosel-thumbnail' src="../src/assets/images/image-product-4-thumbnail.jpg" alt="" />
+      </div>
     </section>
   )
 }

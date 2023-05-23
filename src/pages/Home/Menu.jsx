@@ -4,12 +4,13 @@ import { useState } from 'react'
 
 export default function Menu() {
     
-    const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const [isMenuOpen, setIsMenuOpen] = useState(true)
     const menuStyle = {
         display: isMenuOpen ? 'flex' : 'none',
         animation: isMenuOpen ? 'showMenu 0.25s' : 'none'
         
     }
+
 
     function showMenu(){
         setIsMenuOpen(!isMenuOpen)

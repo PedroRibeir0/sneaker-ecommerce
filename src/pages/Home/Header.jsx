@@ -13,8 +13,8 @@ export default function Header({amount, trash}) {
     <>
     <header>
       <div>
-        <Menu></Menu>
-        <h2>sneakers</h2>
+        <Menu/>
+        <h2 className='logo'>sneakers</h2>
       </div>
       <div>
         <div onClick={e=>setIsCardOpen(!isCardOpen)} id='cart-icon' data-number={amount}>

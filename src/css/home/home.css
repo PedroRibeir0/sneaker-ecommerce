@@ -6,28 +6,82 @@ header {
   align-items: center;
   justify-content: space-between;
 }
+@media screen and (min-width: 550px) {
+  header {
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  header {
+    padding: 25px 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header {
+    border-bottom: 1px solid #e2e4e9;
+    padding-bottom: 40px;
+    margin-bottom: 80px;
+  }
+}
 header div {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   gap: 15px;
+  width: -moz-max-content;
+  width: max-content;
 }
-header h2 {
+@media screen and (min-width: 768px) {
+  header div {
+    gap: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header div {
+    gap: 30px;
+  }
+}
+header .logo {
   font-size: 30px;
   font-weight: 700;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
 }
+@media screen and (min-width: 768px) {
+  header .logo {
+    font-size: 38px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .logo {
+    order: 1;
+  }
+}
 header .header-icons {
   font-size: 23px;
   cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  header .header-icons {
+    font-size: 30px;
+  }
 }
 header .menu-icon {
   font-size: 26px;
   color: hsl(219, 9%, 45%);
   z-index: 1000;
   cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  header .menu-icon {
+    font-size: 35px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .menu-icon {
+    display: none;
+  }
 }
 header #cart-icon {
   position: relative;
@@ -51,6 +105,14 @@ header .ballon {
   border-radius: 50%;
   cursor: pointer;
 }
+@media screen and (min-width: 768px) {
+  header .ballon {
+    width: 20px;
+    height: 20px;
+    bottom: 19px;
+    left: 18px;
+  }
+}
 header .menu-container {
   z-index: 10;
   display: flex;
@@ -67,6 +129,24 @@ header .menu-container {
   gap: 21px;
   box-shadow: 37px 0 77px 77px rgba(0, 0, 0, 0.1);
 }
+@media screen and (min-width: 768px) {
+  header .menu-container {
+    width: 50%;
+    padding-top: 120px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .menu-container {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    background-color: transparent;
+    box-shadow: none;
+    order: 2;
+    padding: 0;
+    margin-left: 50px;
+  }
+}
 header .menu-container .menu-opt {
   cursor: pointer;
   font-size: 20px;
@@ -74,6 +154,18 @@ header .menu-container .menu-opt {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+}
+@media screen and (min-width: 768px) {
+  header .menu-container .menu-opt {
+    font-size: 27px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .menu-container .menu-opt {
+    font-size: 17px;
+    font-weight: 500;
+    color: hsl(219, 9%, 45%);
+  }
 }
 header .menu-container .menu-opt:hover {
   color: hsl(220, 14%, 75%);
@@ -84,26 +176,84 @@ header .menu-container .menu-opt:hover {
     transform: translateX(-100%);
   }
 }
-.images {
+.images-container {
   width: 100%;
   height: 400px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
   transition: all 0.25s;
   position: relative;
 }
-.images .icons {
+@media screen and (min-width: 550px) {
+  .images-container {
+    height: 500px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .images-container {
+    height: 700px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .images-container {
+    width: 500px;
+    height: -moz-max-content;
+    height: max-content;
+    gap: 25px;
+  }
+}
+.images-container .main-image {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .images-container .main-image {
+    height: 500px;
+    border-radius: 15px;
+  }
+}
+.images-container .icons {
   display: inline;
   padding: 7px;
   font-size: 40px;
-  background-color: white;
+  background-color: hsl(0, 0%, 100%);
   border-radius: 50%;
   transition: all 0.1s;
 }
-.images .icons:active {
+@media screen and (min-width: 768px) {
+  .images-container .icons {
+    font-size: 55px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .images-container .icons {
+    display: none;
+  }
+}
+.images-container .icons:active {
   transform: scale(0.9);
+}
+
+.carrosel {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .carrosel {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+.carrosel .carrosel-thumbnail {
+  width: 90px;
+  height: 90px;
+  border-radius: 8px;
 }
 
 .main {
@@ -113,6 +263,17 @@ header .menu-container .menu-opt:hover {
   flex-direction: column;
   gap: 15px;
   margin-bottom: 50px;
+}
+@media screen and (min-width: 1024px) {
+  .main {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main {
+    padding: 0 110px;
+    gap: 25px;
+  }
 }
 .main .brand {
   color: hsl(26, 100%, 55%);
@@ -124,19 +285,41 @@ header .menu-container .menu-opt:hover {
      -moz-user-select: none;
           user-select: none;
 }
+@media screen and (min-width: 768px) {
+  .main .brand {
+    font-size: 16px;
+  }
+}
 .main .product-name {
   color: hsl(220, 13%, 13%);
   font-size: 30px;
 }
+@media screen and (min-width: 768px) {
+  .main .product-name {
+    font-size: 37px;
+  }
+}
 .main .product-descripition {
   color: hsl(219, 9%, 45%);
   font-weight: 500;
+}
+@media screen and (min-width: 768px) {
+  .main .product-descripition {
+    font-size: 19px;
+  }
 }
 .main .prices {
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media screen and (min-width: 1024px) {
+  .main .prices {
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+  }
 }
 .main .prices div {
   display: flex;
@@ -148,6 +331,11 @@ header .menu-container .menu-opt:hover {
   font-size: 27px;
   font-weight: 700;
 }
+@media screen and (min-width: 768px) {
+  .main .prices .current-price {
+    font-size: 33px;
+  }
+}
 .main .prices .discount {
   color: hsl(26, 100%, 55%);
   font-weight: 700;
@@ -156,17 +344,33 @@ header .menu-container .menu-opt:hover {
   padding: 5px 9px;
   border-radius: 5px;
 }
+@media screen and (min-width: 768px) {
+  .main .prices .discount {
+    font-size: 21px;
+  }
+}
 .main .prices .old-price {
   font-size: 16px;
   text-decoration: line-through;
   color: hsl(220, 14%, 75%);
   font-weight: 700;
 }
+@media screen and (min-width: 768px) {
+  .main .prices .old-price {
+    font-size: 21px;
+  }
+}
 .main .buttons {
   margin-top: 10px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .main .buttons {
+    width: 100%;
+    flex-direction: row;
+  }
 }
 .main .amount {
   -webkit-user-select: none;
@@ -182,16 +386,29 @@ header .menu-container .menu-opt:hover {
   padding: 0 20px;
   border-radius: 10px;
   color: hsl(220, 13%, 13%);
+  flex-grow: 1;
+}
+@media screen and (min-width: 768px) {
+  .main .amount {
+    height: 65px;
+    font-size: 20px;
+  }
 }
 .main .amount .minus-plus {
   font-size: 28px;
   color: hsl(26, 100%, 55%);
   cursor: pointer;
 }
+@media screen and (min-width: 768px) {
+  .main .amount .minus-plus {
+    font-size: 27px;
+  }
+}
 .main .amount .minus-plus:active {
   transform: scale(0.83);
 }
 .main .add-cart-button {
+  flex-grow: 2;
   background-color: hsl(26, 100%, 55%);
   border: none;
   display: inline;
@@ -206,6 +423,12 @@ header .menu-container .menu-opt:hover {
   font-size: 17px;
   box-shadow: 0 5px 20px 5px rgba(255, 60, 0, 0.3);
   cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .main .add-cart-button {
+    height: 65px;
+    font-size: 18px;
+  }
 }
 .main .add-cart-button .cart-icon {
   font-size: 23px;
@@ -229,6 +452,11 @@ header .menu-container .menu-opt:hover {
   transform: translateX(-50%);
   border-radius: 10px;
 }
+@media screen and (min-width: 768px) {
+  .cart-container {
+    top: 115px;
+  }
+}
 .cart-container .cart-txt {
   color: hsl(220, 13%, 13%);
   display: flex;
@@ -242,14 +470,17 @@ header .menu-container .menu-opt:hover {
      -moz-user-select: none;
           user-select: none;
 }
-.cart-container .cart-txt .close-icon {
-  font-size: 19px;
+@media screen and (min-width: 768px) {
+  .cart-container .cart-txt {
+    font-size: 23px;
+    padding: 24px 20px;
+  }
 }
 .cart-container .item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
+  padding: 15px 20px;
   color: hsl(219, 9%, 45%);
   font-weight: 500;
 }
@@ -258,10 +489,21 @@ header .menu-container .menu-opt:hover {
   height: 60px;
   border-radius: 8px;
 }
+@media screen and (min-width: 768px) {
+  .cart-container .item .item-thumbnail {
+    width: 90px;
+    height: 90px;
+  }
+}
 .cart-container .item .item-info {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+@media screen and (min-width: 768px) {
+  .cart-container .item .item-info {
+    font-size: 23px;
+  }
 }
 .cart-container .item .item-info .item-prices {
   display: flex;
@@ -276,6 +518,11 @@ header .menu-container .menu-opt:hover {
   font-size: 19px;
   cursor: pointer;
 }
+@media screen and (min-width: 768px) {
+  .cart-container .item .trash-icon {
+    font-size: 30px;
+  }
+}
 .cart-container .item .trash-icon:active {
   transform: scale(0.93);
 }
@@ -285,6 +532,12 @@ header .menu-container .menu-opt:hover {
   font-weight: 500;
   margin-top: 15px;
   font-size: 18px;
+}
+@media screen and (min-width: 768px) {
+  .cart-container .no-items {
+    font-size: 24px;
+    padding: 10px 0;
+  }
 }
 .cart-container .checkout-button {
   background-color: hsl(26, 100%, 55%);
@@ -298,9 +551,28 @@ header .menu-container .menu-opt:hover {
   font-weight: 700;
   cursor: pointer;
 }
+@media screen and (min-width: 768px) {
+  .cart-container .checkout-button {
+    font-size: 19px;
+    height: 70px;
+  }
+}
 .cart-container .checkout-button:hover {
   background-color: #ff9442;
 }
 .cart-container .checkout-button:active {
   transform: scale(0.98);
+}
+
+.home {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .main-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }/*# sourceMappingURL=home.css.map */

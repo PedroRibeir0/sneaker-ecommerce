@@ -8,3 +8,18 @@ $orange: hsl(26, 100%, 55%);
 $pale-orange: hsl(25, 100%, 94%);
 
 @import 'header', 'images', 'main','cart';
+
+
+.home{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.main-images{
+    @media screen and (min-width: 1024px){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+

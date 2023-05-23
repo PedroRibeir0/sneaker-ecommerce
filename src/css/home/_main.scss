@@ -6,6 +6,14 @@
     gap: 15px;
     margin-bottom: 50px;
 
+    @media screen and (min-width: 1024px){
+        width: 50%;
+    }
+    @media screen and (min-width: 1024px){
+        padding: 0 110px;
+        gap: 25px;
+    }
+
     .brand{
         color: $orange;
         text-transform: uppercase;
@@ -13,16 +21,25 @@
         font-size: 13px;
         letter-spacing: 2px;
         user-select: none;
+        @media screen and (min-width: 768px){
+            font-size: 16px;
+        }
     }
 
     .product-name{
         color: $very-dark-blue;
         font-size: 30px;
+        @media screen and (min-width: 768px){
+            font-size: 37px;
+        }
     }
 
     .product-descripition{
         color: $dark-grayish-blue;
         font-weight: 500;
+        @media screen and (min-width: 768px){
+            font-size: 19px;
+        }
     }
 
     .prices{
@@ -30,6 +47,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media screen and (min-width: 1024px){
+            flex-direction: column;
+            align-items: start;
+            gap: 10px;
+        }
 
         div{
             display: flex;
@@ -41,6 +63,9 @@
             color: $very-dark-blue;
             font-size: 27px;
             font-weight: 700;
+            @media screen and (min-width: 768px){
+                font-size: 33px;
+            }
         }
 
         .discount{
@@ -50,6 +75,9 @@
             background-color: $pale-orange;
             padding: 5px 9px;
             border-radius: 5px; 
+            @media screen and (min-width: 768px){
+                font-size: 21px;
+            }
         }
 
         .old-price{
@@ -57,6 +85,9 @@
             text-decoration: line-through;
             color: $grayish-blue;
             font-weight: 700;
+            @media screen and (min-width: 768px){
+                font-size: 21px;
+            }
         }
     }
 
@@ -65,7 +96,12 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
+        @media screen and (min-width: 1024px){
+            width: 100%;
+            flex-direction: row;
+        }
     }
+    
 
     .amount{
         user-select: none;
@@ -79,11 +115,19 @@
         padding: 0 20px;
         border-radius: 10px;
         color: $very-dark-blue;
+        flex-grow: 1;
+        @media screen and (min-width: 768px){
+            height: 65px;
+            font-size: 20px;
+        }
 
         .minus-plus{
             font-size: 28px;
             color: $orange;
             cursor: pointer;
+            @media screen and (min-width: 768px){
+                font-size: 27px;
+            }
 
             &:active{
                 transform: scale(0.83);
@@ -92,6 +136,7 @@
     }
     
     .add-cart-button{
+        flex-grow: 2;
         background-color: $orange;
         border: none;
         display: inline;
@@ -106,6 +151,10 @@
         font-size: 17px;
         box-shadow: 0 5px 20px 5px rgba(255, 60, 0, 0.3);
         cursor: pointer;
+        @media screen and (min-width: 768px){
+            height: 65px;
+            font-size: 18px;
+        }
 
         .cart-icon{
             font-size: 23px;

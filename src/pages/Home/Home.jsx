@@ -15,22 +15,24 @@ export default function Home() {
   }
 
   return (
-    <>
+    <div className='home'>
       <Header
         amount={amount}
         trash={e=>setAmount(0)}
       />
-      <Images/>
-      <Main
-        amount={count}
-        minus={e=>{
-          if (count <= 0) return
-          setCount(count - 1)
-        }}
-        plus={e=> setCount(count + 1)}
-        sendToCart={sendToCart}
-      />
-    </>
+      <div className='main-images'>
+        <Images/>
+        <Main
+          amount={count}
+          minus={e=>{
+            if (count <= 0) return
+            setCount(count - 1)
+          }}
+          plus={e=> setCount(count + 1)}
+          sendToCart={sendToCart}
+        />
+      </div>
+    </div>
   )
 }
 
