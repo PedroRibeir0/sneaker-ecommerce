@@ -32,6 +32,19 @@ export default function Images() {
     })
   }
 
+  function handleThumbnail(e){
+    const thumbs = document.querySelectorAll('.carrosel-thumbnail')
+    let imgIndex = Number(e.target.id[4])
+    setBackgroundImage({
+      backgroundImage: backgrounds[imgIndex],
+      backgroundSize: 'cover'
+    })
+    thumbs.forEach(item=>{
+      item.classList.remove('selected')
+    })
+    e.target.classList.add('selected')
+  }
+
   return (
     <section className='images-container'>
       <div className="main-image" style={backgroundImage}>
@@ -39,10 +52,22 @@ export default function Images() {
           <GrFormNext className='icons' onClick={nextImage}/> 
       </div>
       <div className='carrosel'>
-        <img className='carrosel-thumbnail' src="../src/assets/images/image-product-1-thumbnail.jpg" alt="" />
-        <img className='carrosel-thumbnail' src="../src/assets/images/image-product-2-thumbnail.jpg" alt="" />
-        <img className='carrosel-thumbnail' src="../src/assets/images/image-product-3-thumbnail.jpg" alt="" />
-        <img className='carrosel-thumbnail' src="../src/assets/images/image-product-4-thumbnail.jpg" alt="" />
+        <picture>
+          <img className='carrosel-thumbnail selected' src="../src/assets/images/image-product-1-thumbnail.jpg" alt="" id='img-0' onClick={handleThumbnail}/>
+          <div className='white'></div>
+        </picture>
+        <picture>
+          <img className='carrosel-thumbnail' src="../src/assets/images/image-product-2-thumbnail.jpg" alt="" id='img-1' onClick={handleThumbnail}/>
+          <div className='white'></div>
+        </picture>
+        <picture>
+          <img className='carrosel-thumbnail' src="../src/assets/images/image-product-3-thumbnail.jpg" alt="" id='img-2' onClick={handleThumbnail}/>
+          <div className='white'></div>
+        </picture>
+        <picture>
+          <img className='carrosel-thumbnail' src="../src/assets/images/image-product-4-thumbnail.jpg" alt="" id='img-3' onClick={handleThumbnail}/>
+          <div className='white'></div>
+        </picture>
       </div>
     </section>
   )
