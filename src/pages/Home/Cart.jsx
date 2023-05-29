@@ -24,8 +24,8 @@ export default function Cart(props) {
     return (
     <div className="cart-container">
         <span className='cart-txt'>Cart</span>
-        {props.amount > 0 ? <Item/> : <span className='no-items'>No item selected</span>}
-        <button className='checkout-button'>Checkout</button>
+        {props.amount > 0 ? <Item/> : <span className='no-items'>Your cart is empty</span>}
+        {props.amount > 0 && <button className='checkout-button'>Checkout</button>}
     </div>
   )
 }

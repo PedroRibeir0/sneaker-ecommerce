@@ -12,6 +12,13 @@
     @media screen and (min-width: 768px){
         top: 115px;
     }
+    @media screen and (min-width: 1024px){
+        width: 420px;
+        left: 81%;   
+        box-shadow: 0 8px 20px 10px rgba(0, 0, 0, 0.123);
+        top: 88px;
+    }
+    
 
     .cart-txt{
         color: $very-dark-blue;
@@ -24,8 +31,11 @@
         border-bottom: 1px solid $grayish-blue;
         user-select: none;
         @media screen and (min-width: 768px){
-            font-size: 23px;
+            font-size: 21px;
             padding: 24px 20px;
+        }
+        @media screen and (min-width: 1024px){
+            font-size: 19px;
         }
     }
 
@@ -42,8 +52,12 @@
             height: 60px;
             border-radius: 8px;
             @media screen and (min-width: 768px){
-                width: 90px;
-                height: 90px;
+                width: 85px;
+                height: 85px;
+            }
+            @media screen and (min-width: 1024px){
+                height: 70px;
+                width: 70px;
             }
         }
 
@@ -52,7 +66,10 @@
             flex-direction: column;
             gap: 8px;
             @media screen and (min-width: 768px){
-                font-size: 23px;
+                font-size: 21px;
+            }
+            @media screen and (min-width: 1024px){
+                font-size: 19px;
             }
 
             .item-prices{
@@ -70,7 +87,10 @@
             font-size: 19px;
             cursor: pointer;
             @media screen and (min-width: 768px){
-                font-size: 30px;
+                font-size: 25px;
+            }
+            @media screen and (min-width: 1024px){
+                font-size: 20px;
             }
 
             &:active{
@@ -83,11 +103,14 @@
         text-align: center;
         color: $dark-grayish-blue;
         font-weight: 500;
-        margin-top: 15px;
+        margin: 35px 0 ;
         font-size: 18px;
         @media screen and (min-width: 768px){
-            font-size: 24px;
+            font-size: 21px;
             padding: 10px 0;
+        }
+        @media screen and (min-width: 1024px){
+            font-size: 19px;
         }
     }
 
@@ -103,8 +126,12 @@
         font-weight: 700;
         cursor: pointer;
         @media screen and (min-width: 768px){
-            font-size: 19px;
-            height: 70px;
+            font-size: 18px;
+            height: 65px;
+        }
+        @media screen and (min-width: 1024px){
+            font-size: 17px;
+            height: 60px;
         }
 
         &:hover{
