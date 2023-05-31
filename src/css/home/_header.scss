@@ -65,7 +65,9 @@ header{
             font-size: 35px;
         }
         @media screen and (min-width: 1024px){
-            display: none;
+            order: 2;
+            font-size: 23px;
+
         }
     }
 
@@ -112,6 +114,7 @@ header{
         height: 100%;
         gap: 21px;
         box-shadow: 37px 0 77px 77px rgba(0, 0, 0, 0.1);
+        animation: showMenuMobile 0.25s;
         @media screen and (min-width: 768px){
             width: 50%;
             padding-top: 120px;
@@ -125,6 +128,7 @@ header{
             order: 2;
             padding: 0;
             margin-left: 50px;
+            animation: showMenuDesktop 0.25s;
         }
 
         .menu-opt{
@@ -149,8 +153,14 @@ header{
     }
 }
 
-@keyframes showMenu {
+@keyframes showMenuMobile {
     0%{
         transform: translateX(-100%);
     }    
+}
+
+@keyframes showMenuDesktop {
+    0%{
+        transform: translateX(-28%);
+    }
 }

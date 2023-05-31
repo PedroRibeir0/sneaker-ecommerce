@@ -80,7 +80,8 @@ header .menu-icon {
 }
 @media screen and (min-width: 1024px) {
   header .menu-icon {
-    display: none;
+    order: 2;
+    font-size: 23px;
   }
 }
 header #cart-icon {
@@ -128,6 +129,7 @@ header .menu-container {
   height: 100%;
   gap: 21px;
   box-shadow: 37px 0 77px 77px rgba(0, 0, 0, 0.1);
+  animation: showMenuMobile 0.25s;
 }
 @media screen and (min-width: 768px) {
   header .menu-container {
@@ -145,6 +147,7 @@ header .menu-container {
     order: 2;
     padding: 0;
     margin-left: 50px;
+    animation: showMenuDesktop 0.25s;
   }
 }
 header .menu-container .menu-opt {
@@ -171,9 +174,14 @@ header .menu-container .menu-opt:hover {
   color: hsl(220, 14%, 75%);
 }
 
-@keyframes showMenu {
+@keyframes showMenuMobile {
   0% {
     transform: translateX(-100%);
+  }
+}
+@keyframes showMenuDesktop {
+  0% {
+    transform: translateX(-28%);
   }
 }
 .images-container {
