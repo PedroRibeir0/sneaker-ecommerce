@@ -4,10 +4,10 @@ import { useState } from 'react'
 export default function Images() {
 
   const backgrounds = [
-    'url("../src/assets/images/image-product-1.jpg")',
-    'url("../src/assets/images/image-product-2.jpg")',
-    'url("../src/assets/images/image-product-3.jpg")',
-    'url("../src/assets/images/image-product-4.jpg")'
+    'url("../src/assets/images/image-product-1.png")',
+    'url("../src/assets/images/image-product-2.png")',
+    'url("../src/assets/images/image-product-3.png")',
+    'url("../src/assets/images/image-product-4.png")'
   ]
   const [backgroundImage, setBackgroundImage] = useState({
     backgroundImage: backgrounds[0],
@@ -53,19 +53,19 @@ export default function Images() {
       </div>
       <div className='carrosel'>
         <picture>
-          <img className='carrosel-thumbnail selected' src="../src/assets/images/image-product-1-thumbnail.jpg" alt="" id='img-0' onClick={handleThumbnail}/>
+          <img className='carrosel-thumbnail selected' src="../src/assets/images/image-product-1-thumbnail.png" alt="" id='img-0' onClick={handleThumbnail}/>
           <div className='white'></div>
         </picture>
         <picture>
-          <img className='carrosel-thumbnail' src="../src/assets/images/image-product-2-thumbnail.jpg" alt="" id='img-1' onClick={handleThumbnail}/>
+          <img className='carrosel-thumbnail' src="../src/assets/images/image-product-2-thumbnail.png" alt="" id='img-1' onClick={handleThumbnail}/>
           <div className='white'></div>
         </picture>
         <picture>
-          <img className='carrosel-thumbnail' src="../src/assets/images/image-product-3-thumbnail.jpg" alt="" id='img-2' onClick={handleThumbnail}/>
+          <img className='carrosel-thumbnail' src="../src/assets/images/image-product-3-thumbnail.png" alt="" id='img-2' onClick={handleThumbnail}/>
           <div className='white'></div>
         </picture>
         <picture>
-          <img className='carrosel-thumbnail' src="../src/assets/images/image-product-4-thumbnail.jpg" alt="" id='img-3' onClick={handleThumbnail}/>
+          <img className='carrosel-thumbnail' src="../src/assets/images/image-product-4-thumbnail.png" alt="" id='img-3' onClick={handleThumbnail}/>
           <div className='white'></div>
         </picture>
       </div>

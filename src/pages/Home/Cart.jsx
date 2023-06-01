@@ -7,7 +7,7 @@ export default function Cart(props) {
     function Item(){
         return(
             <div className="item">
-            <img className="item-thumbnail" src="../src/assets/images/image-product-1-thumbnail.jpg" alt="" />
+            <img className="item-thumbnail" src="../src/assets/images/image-product-1-thumbnail.png" alt="" />
             <div className="item-info">
                 <span className="item-name">Fall Limited Edition Sneakers</span>
                 <div className="item-prices">
