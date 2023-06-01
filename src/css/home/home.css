@@ -97,7 +97,7 @@ header .ballon {
   bottom: 14px;
   left: 13px;
   color: hsl(0, 0%, 100%);
-  background-color: hsl(26, 100%, 55%);
+  background-color: hsl(26, 98%, 55%);
   width: 14px;
   height: 14px;
   display: flex;
@@ -273,7 +273,7 @@ header .menu-container .menu-opt:hover {
   cursor: pointer;
 }
 .carrosel .selected {
-  outline: 2px solid hsl(26, 100%, 55%);
+  outline: 2px solid hsl(26, 98%, 55%);
 }
 .carrosel .selected ~ .white {
   border-radius: 8px;
@@ -306,7 +306,7 @@ header .menu-container .menu-opt:hover {
   }
 }
 .main .brand {
-  color: hsl(26, 100%, 55%);
+  color: hsl(26, 98%, 55%);
   text-transform: uppercase;
   font-weight: 700;
   font-size: 13px;
@@ -367,7 +367,7 @@ header .menu-container .menu-opt:hover {
   }
 }
 .main .prices .discount {
-  color: hsl(26, 100%, 55%);
+  color: hsl(26, 98%, 55%);
   font-weight: 700;
   font-size: 16px;
   background-color: hsl(25, 100%, 94%);
@@ -426,7 +426,7 @@ header .menu-container .menu-opt:hover {
 }
 .main .amount .minus-plus {
   font-size: 28px;
-  color: hsl(26, 100%, 55%);
+  color: hsl(26, 98%, 55%);
   cursor: pointer;
 }
 @media screen and (min-width: 768px) {
@@ -439,7 +439,7 @@ header .menu-container .menu-opt:hover {
 }
 .main .add-cart-button {
   flex-grow: 2;
-  background-color: hsl(26, 100%, 55%);
+  background-color: hsl(26, 98%, 55%);
   border: none;
   display: inline;
   height: 55px;
@@ -464,7 +464,7 @@ header .menu-container .menu-opt:hover {
   font-size: 23px;
 }
 .main .add-cart-button:hover {
-  background-color: #ff9442;
+  background-color: #fd9444;
 }
 .main .add-cart-button:active {
   transform: scale(0.98);
@@ -604,7 +604,7 @@ header .menu-container .menu-opt:hover {
   }
 }
 .cart-container .checkout-button {
-  background-color: hsl(26, 100%, 55%);
+  background-color: hsl(26, 98%, 55%);
   margin: 15px;
   margin-bottom: 30px;
   height: 55px;
@@ -628,7 +628,7 @@ header .menu-container .menu-opt:hover {
   }
 }
 .cart-container .checkout-button:hover {
-  background-color: #ff9442;
+  background-color: #fd9444;
 }
 .cart-container .checkout-button:active {
   transform: scale(0.98);
