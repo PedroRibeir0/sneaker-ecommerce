@@ -1,14 +1,27 @@
 import {IoMdClose} from 'react-icons/io'
 import {HiOutlineMenuAlt3} from 'react-icons/hi'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function Menu() {
     
     const [isMenuOpen, setIsMenuOpen] = useState(true)
+    const menuOptions = ['Collections', 'Men', 'Woman', 'About', 'Contact']
     const menuStyle = {
         display: isMenuOpen ? 'flex' : 'none',
-        // animation: isMenuOpen ? 'showMenu 0.25s' : 'none' 
     }
+
+    useEffect(() => {
+        function handleResize(){
+          setIsMenuOpen(window.innerWidth >= 1024);
+    
+        };
+        window.addEventListener('load', handleResize);
+        window.addEventListener('resize', handleResize);
+    
+        return () => {
+          window.removeEventListener('resize', handleResize);
+        };
+      }, []);
 
     function showMenu(){
         setIsMenuOpen(!isMenuOpen)
@@ -16,13 +29,20 @@ export default function Menu() {
 
     return (
         <>
-            {isMenuOpen ? <IoMdClose className='menu-icon' onClick={showMenu}/> : <HiOutlineMenuAlt3 className='menu-icon' onClick={showMenu}/>}
+            {isMenuOpen ? 
+            <IoMdClose 
+                className='menu-icon' 
+                onClick={showMenu}
+            /> : 
+            <HiOutlineMenuAlt3 
+                className='menu-icon' 
+                onClick={showMenu}
+            />}
+
             <ul className="menu-container" style={menuStyle}>
-                <li className='menu-opt'>Collections</li>
-                <li className='menu-opt'>Men</li>
-                <li className='menu-opt'>Woman</li>
-                <li className='menu-opt'>About</li>
-                <li className='menu-opt'>Contact</li>
+                {menuOptions.map(item=>{
+                   return <li className='menu-opt' key={item}>{item}</li>
+                })}
             </ul>
         </>
     )

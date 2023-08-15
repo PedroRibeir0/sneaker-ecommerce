@@ -1,22 +1,21 @@
-import {HiMenu} from 'react-icons/hi'
 import {BsCart3} from 'react-icons/bs'
 import {BiUserCircle} from 'react-icons/bi'
 import Menu from './Menu'
 import Cart from './Cart'
 import { useState } from 'react'
 
-export default function Header({amount, trash}) {
+export default function Header({amount, trash, price}) {
 
   const [isCardOpen, setIsCardOpen] = useState(false)
 
   return (
     <>
     <header>
-      <div>
+      <div className='container'>
         <Menu/>
         <h2 className='logo'>sneakers</h2>
       </div>
-      <div>
+      <div className='container'>
         <div onClick={e=>setIsCardOpen(!isCardOpen)} id='cart-icon' data-number={amount}>
           <BsCart3 className='header-icons'/>
           {amount > 0 && <div className='ballon'>{amount}</div>}
@@ -24,7 +23,7 @@ export default function Header({amount, trash}) {
         <BiUserCircle className='header-icons'/>
       </div>
     </header>
-    {isCardOpen && <Cart amount={amount} trash={trash}/>}
+    {isCardOpen && <Cart amount={amount} trash={trash} price={price}/>}
     </>
   )
 }

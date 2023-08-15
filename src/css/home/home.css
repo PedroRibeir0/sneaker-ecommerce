@@ -23,21 +23,21 @@ header {
     margin-bottom: 80px;
   }
 }
-header div {
+header .container {
   display: flex;
   justify-content: start;
   align-items: center;
-  gap: 15px;
+  gap: 25px;
   width: -moz-max-content;
   width: max-content;
 }
 @media screen and (min-width: 768px) {
-  header div {
-    gap: 20px;
+  header .container {
+    gap: 50px;
   }
 }
 @media screen and (min-width: 1024px) {
-  header div {
+  header .container {
     gap: 30px;
   }
 }
@@ -80,8 +80,7 @@ header .menu-icon {
 }
 @media screen and (min-width: 1024px) {
   header .menu-icon {
-    order: 2;
-    font-size: 23px;
+    display: none;
   }
 }
 header #cart-icon {
@@ -114,76 +113,7 @@ header .ballon {
     left: 18px;
   }
 }
-header .menu-container {
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  position: absolute;
-  background-color: hsl(0, 0%, 100%);
-  top: 0;
-  left: 0;
-  padding-top: 90px;
-  padding-left: 20px;
-  width: 60%;
-  height: 100%;
-  gap: 21px;
-  box-shadow: 37px 0 77px 77px rgba(0, 0, 0, 0.1);
-  animation: showMenuMobile 0.25s;
-}
-@media screen and (min-width: 768px) {
-  header .menu-container {
-    width: 50%;
-    padding-top: 120px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  header .menu-container {
-    display: flex;
-    position: relative;
-    flex-direction: row;
-    background-color: transparent;
-    box-shadow: none;
-    order: 2;
-    padding: 0;
-    margin-left: 50px;
-    animation: showMenuDesktop 0.25s;
-  }
-}
-header .menu-container .menu-opt {
-  cursor: pointer;
-  font-size: 20px;
-  font-weight: 700;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
-@media screen and (min-width: 768px) {
-  header .menu-container .menu-opt {
-    font-size: 27px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  header .menu-container .menu-opt {
-    font-size: 17px;
-    font-weight: 500;
-    color: hsl(219, 9%, 45%);
-  }
-}
-header .menu-container .menu-opt:hover {
-  color: hsl(220, 14%, 75%);
-}
 
-@keyframes showMenuMobile {
-  0% {
-    transform: translateX(-100%);
-  }
-}
-@keyframes showMenuDesktop {
-  0% {
-    transform: translateX(-28%);
-  }
-}
 .images-container {
   width: 100%;
   height: 400px;
@@ -219,6 +149,7 @@ header .menu-container .menu-opt:hover {
   padding: 10px;
   width: 100%;
   height: 100%;
+  transition: all 0.2s;
 }
 @media screen and (min-width: 1024px) {
   .images-container .main-image {
@@ -248,34 +179,34 @@ header .menu-container .menu-opt:hover {
   transform: scale(0.9);
 }
 
-.carrosel {
+.carrousel {
   display: none;
 }
 @media screen and (min-width: 1024px) {
-  .carrosel {
+  .carrousel {
     display: flex;
     width: 100%;
     justify-content: space-between;
   }
 }
-.carrosel picture {
+.carrousel picture {
   width: 90px;
   height: 90px;
   position: relative;
 }
-.carrosel picture .white {
+.carrousel picture .white {
   display: none;
 }
-.carrosel .carrosel-thumbnail {
+.carrousel .carrousel-thumbnail {
   width: 100%;
   height: 100%;
   border-radius: 8px;
   cursor: pointer;
 }
-.carrosel .selected {
+.carrousel .selected {
   outline: 2px solid hsl(26, 98%, 55%);
 }
-.carrosel .selected ~ .white {
+.carrousel .selected ~ .white {
   border-radius: 8px;
   left: 0;
   top: 0;
@@ -329,12 +260,12 @@ header .menu-container .menu-opt:hover {
     font-size: 37px;
   }
 }
-.main .product-descripition {
+.main .product-description {
   color: hsl(219, 9%, 45%);
   font-weight: 500;
 }
 @media screen and (min-width: 768px) {
-  .main .product-descripition {
+  .main .product-description {
     font-size: 19px;
   }
 }
@@ -634,6 +565,75 @@ header .menu-container .menu-opt:hover {
   transform: scale(0.98);
 }
 
+.menu-container {
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  position: absolute;
+  background-color: hsl(0, 0%, 100%);
+  top: 0;
+  left: 0;
+  padding-top: 90px;
+  padding-left: 40px;
+  width: 60%;
+  height: 100%;
+  gap: 21px;
+  box-shadow: 37px 0 77px 77px rgba(0, 0, 0, 0.1);
+  animation: showMenuMobile 0.25s;
+}
+@media screen and (min-width: 768px) {
+  .menu-container {
+    width: 50%;
+    padding-top: 120px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu-container {
+    position: relative;
+    flex-direction: row;
+    background-color: transparent;
+    box-shadow: none;
+    order: 2;
+    padding: 0;
+    margin-left: 50px;
+    animation: showMenuDesktop 0.25s;
+  }
+}
+.menu-container .menu-opt {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+@media screen and (min-width: 768px) {
+  .menu-container .menu-opt {
+    font-size: 27px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu-container .menu-opt {
+    font-size: 17px;
+    font-weight: 500;
+    color: hsl(219, 9%, 45%);
+  }
+}
+.menu-container .menu-opt:hover {
+  color: hsl(220, 14%, 75%);
+}
+
+@keyframes showMenuMobile {
+  0% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes showMenuDesktop {
+  0% {
+    transform: translateX(-28%);
+  }
+}
 .home {
   max-width: 1440px;
   margin: 0 auto;
