@@ -1,7 +1,7 @@
 import Buttons from "./Buttons"
 
 
-export default function Main({amount, minus, plus, sendToCart, product}) {
+export default function Main({count, minus, plus, sendToCart, product}) {
 
   const {name, description, oldPrice, currentPrice, discount} = product
 
@@ -18,7 +18,7 @@ export default function Main({amount, minus, plus, sendToCart, product}) {
           <span className="old-price">${oldPrice}</span>
         </div>
         <Buttons 
-          amount={amount}
+          count={count}
           minus={minus}
           plus={plus}
           sendToCart={sendToCart}

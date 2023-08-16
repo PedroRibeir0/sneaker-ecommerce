@@ -1,6 +1,7 @@
 import {BsTrash3Fill} from 'react-icons/bs'
+import { Link } from 'react-router-dom'
 
-export default function Cart({amount, trash, price}) {
+export default function Cart({amount, trash, price, closeCart}) {
     
     function Item(){
         return(
@@ -23,7 +24,11 @@ export default function Cart({amount, trash, price}) {
     <div className="cart-container">
         <span className='cart-txt'>Cart</span>
         {amount > 0 ? <Item/> : <span className='no-items'>Your cart is empty</span>}
-        {amount > 0 && <button className='checkout-button'>Checkout</button>}
+        {amount > 0 && 
+        <Link to={'/checkout'} className='checkout-button' onClick={closeCart}>
+            <button>Checkout</button>
+        </Link>
+        }
     </div>
   )
 }

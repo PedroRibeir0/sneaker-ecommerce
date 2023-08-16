@@ -6,20 +6,3 @@ $white: hsl(0, 0%, 100%);
 $black: hsl(0, 0%, 0%);
 $orange: hsl(26, 98%, 55%);
 $pale-orange: hsl(25, 100%, 94%);
-
-@import 'images', 'main', 'menu';
-
-.home{
-    max-width: 1440px;
-    margin: 0 auto;
-    position: relative;
-}
-
-.main-images{
-    @media screen and (min-width: 1024px){
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-}
-

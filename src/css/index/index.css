@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body, html, input, button {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+header {
+  color: hsl(220, 13%, 13%);
+  padding: 13px 20px;
+  display: flex;
+  background-color: hsl(0, 0%, 100%);
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (min-width: 550px) {
+  header {
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  header {
+    padding: 25px 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header {
+    border-bottom: 1px solid #e2e4e9;
+    padding-bottom: 40px;
+    margin-bottom: 80px;
+  }
+}
+header .container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 25px;
+  width: -moz-max-content;
+  width: max-content;
+}
+@media screen and (min-width: 768px) {
+  header .container {
+    gap: 50px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .container {
+    gap: 30px;
+  }
+}
+header .logo {
+  font-size: 30px;
+  font-weight: 700;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+@media screen and (min-width: 768px) {
+  header .logo {
+    font-size: 38px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .logo {
+    order: 1;
+  }
+}
+header .header-icons {
+  font-size: 23px;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  header .header-icons {
+    font-size: 30px;
+  }
+}
+header .menu-icon {
+  font-size: 26px;
+  color: hsl(219, 9%, 45%);
+  z-index: 1000;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  header .menu-icon {
+    font-size: 35px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .menu-icon {
+    display: none;
+  }
+}
+header #cart-icon {
+  position: relative;
+}
+header .ballon {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-size: 10px;
+  font-weight: 700;
+  position: absolute;
+  bottom: 14px;
+  left: 13px;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(26, 98%, 55%);
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  header .ballon {
+    width: 20px;
+    height: 20px;
+    bottom: 19px;
+    left: 18px;
+  }
+}
+
+.cart-container {
+  background-color: hsl(0, 0%, 100%);
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  top: 75px;
+  transform: translateX(-50%);
+  border-radius: 10px;
+}
+@media screen and (min-width: 768px) {
+  .cart-container {
+    top: 115px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .cart-container {
+    width: 420px;
+    left: 81%;
+    box-shadow: 0 8px 20px 10px rgba(0, 0, 0, 0.123);
+    top: 88px;
+  }
+}
+.cart-container .cart-txt {
+  color: hsl(220, 13%, 13%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 20px;
+  border-bottom: 1px solid hsl(220, 14%, 75%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+@media screen and (min-width: 768px) {
+  .cart-container .cart-txt {
+    font-size: 21px;
+    padding: 24px 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .cart-container .cart-txt {
+    font-size: 19px;
+  }
+}
+.cart-container .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  color: hsl(219, 9%, 45%);
+  font-weight: 500;
+}
+.cart-container .item .item-thumbnail {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+}
+@media screen and (min-width: 768px) {
+  .cart-container .item .item-thumbnail {
+    width: 85px;
+    height: 85px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .cart-container .item .item-thumbnail {
+    height: 70px;
+    width: 70px;
+  }
+}
+.cart-container .item .item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+@media screen and (min-width: 768px) {
+  .cart-container .item .item-info {
+    font-size: 21px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .cart-container .item .item-info {
+    font-size: 19px;
+  }
+}
+.cart-container .item .item-info .item-prices {
+  display: flex;
+  gap: 8px;
+}
+.cart-container .item .item-info .full-price {
+  font-weight: 700;
+  color: hsl(220, 13%, 13%);
+}
+.cart-container .item .trash-icon {
+  color: hsl(220, 14%, 75%);
+  font-size: 19px;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .cart-container .item .trash-icon {
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .cart-container .item .trash-icon {
+    font-size: 20px;
+  }
+}
+.cart-container .item .trash-icon:active {
+  transform: scale(0.93);
+}
+.cart-container .no-items {
+  text-align: center;
+  color: hsl(219, 9%, 45%);
+  font-weight: 500;
+  margin: 35px 0;
+  font-size: 18px;
+}
+@media screen and (min-width: 768px) {
+  .cart-container .no-items {
+    font-size: 21px;
+    padding: 10px 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .cart-container .no-items {
+    font-size: 19px;
+  }
+}
+.cart-container .checkout-button {
+  background-color: hsl(26, 98%, 55%);
+  margin: 15px 15px 30px 15px;
+  height: 55px;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.cart-container .checkout-button button {
+  letter-spacing: 1px;
+  background-color: transparent;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .cart-container .checkout-button {
+    height: 65px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .cart-container .checkout-button {
+    height: 60px;
+  }
+}
+.cart-container .checkout-button:hover {
+  background-color: #fd9444;
+}
+.cart-container .checkout-button:active {
+  transform: scale(0.98);
+}/*# sourceMappingURL=index.css.map */

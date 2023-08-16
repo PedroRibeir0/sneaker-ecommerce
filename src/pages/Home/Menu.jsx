@@ -4,11 +4,10 @@ import { useState, useEffect } from 'react'
 
 export default function Menu() {
     
-    const [isMenuOpen, setIsMenuOpen] = useState(true)
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
     const menuOptions = ['Collections', 'Men', 'Woman', 'About', 'Contact']
-    const menuStyle = {
-        display: isMenuOpen ? 'flex' : 'none',
-    }
+
+    const changeMenuState = ()=> setIsMenuOpen(!isMenuOpen)
 
     useEffect(() => {
         function handleResize(){
@@ -23,27 +22,23 @@ export default function Menu() {
         };
       }, []);
 
-    function showMenu(){
-        setIsMenuOpen(!isMenuOpen)
-    }
-
     return (
         <>
             {isMenuOpen ? 
             <IoMdClose 
                 className='menu-icon' 
-                onClick={showMenu}
+                onClick={changeMenuState}
             /> : 
             <HiOutlineMenuAlt3 
                 className='menu-icon' 
-                onClick={showMenu}
+                onClick={changeMenuState}
             />}
-
-            <ul className="menu-container" style={menuStyle}>
+            {isMenuOpen &&
+            <ul className="menu-container">
                 {menuOptions.map(item=>{
                    return <li className='menu-opt' key={item}>{item}</li>
                 })}
-            </ul>
+            </ul>}
         </>
     )
 }
