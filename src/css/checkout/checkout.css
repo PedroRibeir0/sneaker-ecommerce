@@ -1,1 +1,24 @@
-/*# sourceMappingURL=checkout.css.map */
+h2 {
+  text-transform: capitalize;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.shipping-address {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+  gap: 40px;
+}
+.shipping-address .name-oc {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.shipping-address .input-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}/*# sourceMappingURL=checkout.css.map */

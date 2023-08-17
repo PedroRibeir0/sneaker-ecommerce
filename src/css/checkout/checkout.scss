@@ -6,3 +6,35 @@ $white: hsl(0, 0%, 100%);
 $black: hsl(0, 0%, 0%);
 $orange: hsl(26, 98%, 55%);
 $pale-orange: hsl(25, 100%, 94%);
+
+
+h2{
+    text-transform: capitalize;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+// section{
+//     box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.123);
+// }
+
+.shipping-address{
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 40px;
+
+    .name-oc{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .input-list{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+}

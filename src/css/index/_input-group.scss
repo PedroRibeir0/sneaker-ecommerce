@@ -1,0 +1,38 @@
+.input-group {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    input {
+      font-size: 16px;
+      color: $very-dark-blue;
+      width: 100%;
+      padding: 12px 15px;
+      border-radius: 10px;
+      border: 2px solid $dark-grayish-blue;
+      outline: none;
+  
+      &:valid+span.placeholder,
+      &:focus+span.placeholder{
+        transform: scale(0.9) translateY(-27px);
+        background: #fff;
+      }
+    }
+  
+    .placeholder {
+      position: absolute;
+      margin: 17px 0;
+      padding: 0 5px;
+      color: $dark-grayish-blue;
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      left: 40px;
+      transition: all 0.2s;
+      transform-origin: 0% 0%;
+      background: none;
+      pointer-events: none;
+    }
+  }
+  
