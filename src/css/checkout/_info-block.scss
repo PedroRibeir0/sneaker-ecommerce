@@ -1,0 +1,36 @@
+.info-block{
+    box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.123);
+    padding: 30px 20px;
+
+    .triangle-icon{
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+
+        &.up{
+            transform: rotate(180deg);
+        }
+    }
+
+    .name-oc{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 22;
+        user-select: none;
+    }
+
+    .content-container{
+        animation: blockDown .25s;
+    }
+}
+
+@keyframes blockDown {
+    0%{
+        transform: translateY(-80px);
+        opacity: 0;
+    }
+}
+
+

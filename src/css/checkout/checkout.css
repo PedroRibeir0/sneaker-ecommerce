@@ -1,24 +1,98 @@
-h2 {
-  text-transform: capitalize;
-  font-size: 19px;
-  font-weight: 700;
-}
-
-.shipping-address {
+.shipping {
   margin-top: 35px;
   display: flex;
   flex-direction: column;
-  padding: 30px 20px;
-  gap: 40px;
+  gap: 30px;
 }
-.shipping-address .name-oc {
+
+.methods {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.methods .method {
+  padding: 15px;
+  border-radius: 8px;
+  border: 2px solid hsl(220, 14%, 75%);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.methods .method .method-price {
+  font-weight: 700;
+}
+.methods .method .method-description {
+  font-size: 14px;
+  width: 50%;
+}
+.methods .method input[type=radio] {
+  accent-color: hsl(0, 0%, 100%);
+  width: 16px;
+  height: 16px;
+}
+.methods .method .method-img {
+  width: 40px;
+  position: relative;
+}
+.methods .method .method-img img {
+  filter: invert(100%) brightness(110%);
+}
+.methods .method .method-img span {
+  position: absolute;
+  bottom: -12px;
+  right: 3px;
+  background-color: hsl(26, 98%, 55%);
+  color: hsl(0, 0%, 100%);
+  font-size: 12px;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+.methods .method .method-img.faster::after {
+  content: "faster";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: purple;
+}
+.methods .method.selected {
+  border-color: hsl(26, 98%, 55%);
+  background-color: rgba(253, 125, 28, 0.2);
+}
+
+.info-block {
+  box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.123);
+  padding: 30px 20px;
+}
+.info-block .triangle-icon {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+}
+.info-block .triangle-icon.up {
+  transform: rotate(180deg);
+}
+.info-block .name-oc {
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  z-index: 22;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
-.shipping-address .input-list {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+.info-block .content-container {
+  animation: blockDown 0.25s;
+}
+
+@keyframes blockDown {
+  0% {
+    transform: translateY(-80px);
+    opacity: 0;
+  }
+}
+h2 {
+  text-transform: capitalize;
+  font-size: 19px;
+  font-weight: 700;
 }/*# sourceMappingURL=checkout.css.map */

@@ -1,8 +1,10 @@
 import '../../css/checkout/checkout.css'
-import{ VscTriangleDown, VscTriangleUp} from 'react-icons/vsc'
 import { useOutletContext } from 'react-router-dom'
 import InputGroup from '../../components/InputGroup'
 import InputConfig from '../../components/InputConfig'
+import InfoBlock from './InfoBlock'
+import Shipping from './Shipping'
+import Method from './Methods'
 
 export default function Checkout() {
 
@@ -10,23 +12,16 @@ export default function Checkout() {
 
   return (
     <div className='checkout'>
-      <section className='shipping-address'>
-        <div className='name-oc'>
-          <h2>shipping address</h2>
-          <VscTriangleUp/>
-        </div>
-        <div className='input-list'>
-          {InputConfig.shipping.map(item=>{
-            return( 
-            <InputGroup 
-            id={item.id} 
-            placeholder={item.placeholder} 
-            type={item.type}
-            key={item.id}
-            />)
-          })}
-        </div>
-      </section>
+      <InfoBlock 
+        className={'shipping'}
+        text={'shipping address'}
+        content={<Shipping/>}
+      />
+      <InfoBlock 
+        className={'shipping'}
+        text={'shipping method'}
+        content={<Method/>}
+      />
     </div>
   )
 }

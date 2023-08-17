@@ -1,0 +1,62 @@
+.methods{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .method{
+        padding: 15px;
+        border-radius: 8px;
+        border: 2px solid $grayish-blue;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        
+        .method-price{
+            font-weight: 700;
+        }
+
+        .method-description{
+            font-size: 14px;
+            width: 50%;
+        }
+
+        input[type="radio"]{
+            accent-color: $white;
+            width: 16px;
+            height: 16px;
+        }
+
+        .method-img{
+            width: 40px;
+            position: relative;
+
+            img{
+                filter: invert(100%) brightness(110%);
+            }
+
+            span{
+                position: absolute;
+                bottom: -12px;
+                right: 3px;
+                background-color: $orange;
+                color: $white;
+                font-size: 12px;
+                padding: 2px 4px;
+                border-radius: 3px;
+            }
+
+            &.faster::after{
+                content: 'faster';
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                background-color: purple;
+            }
+        }
+
+        &.selected{
+            border-color: $orange;
+            background-color: transparentize($color: $orange, $amount: 0.8)
+        }
+    }
+}
