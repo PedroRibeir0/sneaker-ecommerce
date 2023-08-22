@@ -1,10 +1,12 @@
 import '../../css/checkout/checkout.css'
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import { useOutletContext } from 'react-router-dom'
 import { useForm } from "react-hook-form"
 import { zodResolver } from '@hookform/resolvers/zod'
 import inputConfig from './inputConfig'
 import schema from './schema'
+import { mask, unMask } from 'remask'
+
 
 
 export default function Checkout() {
@@ -12,6 +14,7 @@ export default function Checkout() {
   // useEffect(()=> setFocus('firstName'), [])
 
   const [amount] = useOutletContext()
+  const inputRef = useRef();
 
   const {
     register,
@@ -34,10 +37,17 @@ export default function Checkout() {
           {inputConfig.shipping.map(input=>{
             return(
               <div className="input-group" key={input.id}>
-              <input 
+
+                <input
                 type={input.type} 
                 {...register(input.id)}
-              />
+                onChange={e=>{
+                  if (input.mask){
+                    e.target.value = mask(e.target.value, [input.mask])
+                  }
+                }}
+                />
+              
               <span className='placeholder'>{input.placeholder}</span>
               {errors[input.id] && 
               <span className='warning'>
