@@ -7,13 +7,10 @@ $black: hsl(0, 0%, 0%);
 $orange: hsl(26, 98%, 55%);
 $pale-orange: hsl(25, 100%, 94%);
 
-@import 'shipping', 'methods', 'info-block';
+@import 'shipping', 'methods', 'info-block', 'input-group';
 
-h2{
-    text-transform: capitalize;
-    font-size: 19px;
-    font-weight: 700;
+
+.checkout{
+    padding-bottom: 100px;
 }
-
-
 

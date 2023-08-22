@@ -1,14 +1,15 @@
 .shipping {
-  margin-top: 35px;
   display: flex;
   flex-direction: column;
   gap: 30px;
+  margin-top: 30px;
 }
 
 .methods {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  margin-top: 30px;
 }
 .methods .method {
   padding: 15px;
@@ -26,7 +27,7 @@
   width: 50%;
 }
 .methods .method input[type=radio] {
-  accent-color: hsl(0, 0%, 100%);
+  accent-color: #f26a02;
   width: 16px;
   height: 16px;
 }
@@ -62,37 +63,62 @@
 .info-block {
   box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.123);
   padding: 30px 20px;
+  margin-top: 35px;
 }
-.info-block .triangle-icon {
-  width: 40px;
-  height: 40px;
-  padding: 10px;
-}
-.info-block .triangle-icon.up {
-  transform: rotate(180deg);
-}
-.info-block .name-oc {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 22;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
-.info-block .content-container {
-  animation: blockDown 0.25s;
-}
-
-@keyframes blockDown {
-  0% {
-    transform: translateY(-80px);
-    opacity: 0;
-  }
-}
-h2 {
+.info-block h2 {
   text-transform: capitalize;
   font-size: 19px;
   font-weight: 700;
+  margin-bottom: 10px;
+}
+.info-block .sect-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+}
+.input-group input {
+  font-size: 16px;
+  color: hsl(220, 13%, 13%);
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 2px solid hsl(219, 9%, 45%);
+  outline: none;
+}
+.input-group input:valid + span.placeholder, .input-group input:focus + span.placeholder {
+  transform: scale(0.9) translateY(-27px);
+  background: #fff;
+}
+.input-group .placeholder {
+  position: absolute;
+  margin: 17px 0;
+  padding: 0 5px;
+  color: hsl(219, 9%, 45%);
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  left: 40px;
+  transition: all 0.2s;
+  transform-origin: 0% 0%;
+  background: none;
+  pointer-events: none;
+}
+.input-group .warning {
+  position: absolute;
+  font-size: 15px;
+  color: rgb(235, 68, 68);
+  bottom: -25px;
+}
+
+.checkout {
+  padding-bottom: 100px;
 }/*# sourceMappingURL=checkout.css.map */
