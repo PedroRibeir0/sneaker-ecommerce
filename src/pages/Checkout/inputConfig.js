@@ -42,6 +42,22 @@ const inputConfig = {
             type: 'tel',
             mask: '99 99999-9999'
         }
+    ],
+    shipMethods:[
+        {
+            price: 4.99,
+            name: 'USPS 1st Class With Tracking',
+            minDays: 5,
+            maxDays: 13,
+            id: 'm1'
+        },
+        {
+            price: 9.00,
+            name: 'USPS PRIORITY With Tracking',
+            minDays: 5,
+            maxDays: 10,
+            id: 'm2'
+        },
     ]
 }
 

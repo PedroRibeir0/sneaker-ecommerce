@@ -2,79 +2,63 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
-  margin-top: 30px;
 }
 
-.methods {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  margin-top: 30px;
-}
-.methods .method {
+.method {
+  border: 2px solid hsl(219, 9%, 45%);
   padding: 15px;
-  border-radius: 8px;
-  border: 2px solid hsl(220, 14%, 75%);
+  border-radius: 10px;
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
+  line-height: 18px;
+  justify-content: space-between;
 }
-.methods .method .method-price {
+.method.selected {
+  background-color: rgba(253, 125, 28, 0.2);
+  border-color: hsl(26, 98%, 55%);
+}
+.method input[type=radio] {
+  width: 17px;
+  height: 17px;
+  accent-color: #f26a02;
+}
+.method .method-price {
   font-weight: 700;
 }
-.methods .method .method-description {
-  font-size: 14px;
-  width: 50%;
+.method .method-description {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: hsl(219, 9%, 45%);
 }
-.methods .method input[type=radio] {
-  accent-color: #f26a02;
-  width: 16px;
-  height: 16px;
-}
-.methods .method .method-img {
-  width: 40px;
-  position: relative;
-}
-.methods .method .method-img img {
-  filter: invert(100%) brightness(110%);
-}
-.methods .method .method-img span {
+
+.warning {
   position: absolute;
-  bottom: -12px;
-  right: 3px;
-  background-color: hsl(26, 98%, 55%);
-  color: hsl(0, 0%, 100%);
-  font-size: 12px;
-  padding: 2px 4px;
-  border-radius: 3px;
-}
-.methods .method .method-img.faster::after {
-  content: "faster";
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  background-color: purple;
-}
-.methods .method.selected {
-  border-color: hsl(26, 98%, 55%);
-  background-color: rgba(253, 125, 28, 0.2);
+  font-size: 15px;
+  color: rgb(235, 68, 68);
+  bottom: 25px;
 }
 
 .info-block {
   box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.123);
   padding: 30px 20px;
   margin-top: 35px;
+  padding-bottom: 55px;
+  position: relative;
 }
 .info-block h2 {
   text-transform: capitalize;
   font-size: 19px;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
 }
-.info-block .sect-inputs {
+.info-block .inputs-container, .info-block .radios-container {
   display: flex;
   flex-direction: column;
   gap: 60px;
+}
+.info-block .radios-container {
+  gap: 25px;
 }
 
 .input-group {

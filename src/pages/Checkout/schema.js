@@ -1,4 +1,4 @@
-import { z } from "zod"
+import { nullable, z } from "zod"
 import { mask, unMask } from 'remask'
 
 function capitalize(string){
@@ -24,7 +24,7 @@ const schema = z.object({
         .email('Invalid email format'),
     zipCode: z.string()
         .nonempty('Zip Code is required')
-        .max(8 ,'Invalid Zip Code')
+        // .max(9 ,'Invalid Zip Code')
         .refine(zip=> mask(zip, ['99999-999'])),
         // .refine(zip=> !isNaN(zip), 'Invalid Zip Code'),
     street: z.string()
@@ -36,7 +36,8 @@ const schema = z.object({
         .nonempty('City is required'),
     phone: z.string()
         .nonempty('Phone number is required')
-        .refine(zip=> mask(zip, ['99 99999-999']))
+        .refine(zip=> mask(zip, ['99 99999-999'])),
+    methodRadio: z.string()
 })
 
 export default schema
