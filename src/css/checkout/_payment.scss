@@ -1,0 +1,72 @@
+.payment{
+
+    .payment-name{
+        font-weight: 700;
+    }
+
+    .payment-icon{
+        border: 2px solid $dark-grayish-blue;
+        width: 34px;
+        height: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+    }
+
+    .paypal{
+        cursor: pointer;
+        width: 100%;
+        border: 2px solid $dark-grayish-blue;
+        padding: 15px;
+        border-radius: 10px;
+        display: flex;
+        align-items: flex-start;
+        line-height: 18px;
+        justify-content: space-between;
+
+        .paypal-explain{
+            font-size: 13px;
+            width: max-content;
+            flex-basis: 60%;
+        }
+    }
+
+    .credit-card{
+        cursor: pointer;
+        width: 100%;
+        border: 2px solid $dark-grayish-blue;
+        padding: 15px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 45px;
+
+        .input-name{
+            display: flex;
+            gap: 8px;
+        }
+
+        .visible{
+            display: flex;
+            justify-content: space-between;
+
+            .icons{
+                @extend .visible;
+                gap: 2px;
+            }
+        }
+
+        .card-inputs{
+            margin-top: 35px;
+        }
+    }
+    
+
+    .paypal, .credit-card{
+        &.selected{
+            border-color: $orange;
+        }
+    }
+
+}

@@ -6,16 +6,10 @@
     align-items: flex-start;
     line-height: 18px;
     justify-content: space-between;
+    cursor: pointer;
 
     &.selected{
-        background-color: transparentize($color: $orange, $amount: .8);
         border-color: $orange;
-    }
-
-    input[type="radio"]{
-        width: 17px;
-        height: 17px;
-        accent-color: darken($orange, 7);
     }
 
     .method-price{

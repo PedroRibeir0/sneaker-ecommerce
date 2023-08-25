@@ -14,12 +14,6 @@
       border-radius: 10px;
       border: 2px solid $dark-grayish-blue;
       outline: none;
-  
-      &:valid+span.placeholder,
-      &:focus+span.placeholder{
-        transform: scale(0.9) translateY(-27px);
-        background: #fff;
-      }
     }
   
     .placeholder {
@@ -32,9 +26,11 @@
       font-size: 16px;
       left: 40px;
       transition: all 0.2s;
+      transform: scale(0.9) translateY(-27px);
       transform-origin: 0% 0%;
-      background: none;
+      background: transparent;
       pointer-events: none;
+      background: $white;
     }
 
     .warning{
@@ -44,4 +40,3 @@
       bottom: -25px;
     }
   }
-  

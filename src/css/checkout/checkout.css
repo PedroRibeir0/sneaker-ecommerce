@@ -12,15 +12,10 @@
   align-items: flex-start;
   line-height: 18px;
   justify-content: space-between;
+  cursor: pointer;
 }
 .method.selected {
-  background-color: rgba(253, 125, 28, 0.2);
   border-color: hsl(26, 98%, 55%);
-}
-.method input[type=radio] {
-  width: 17px;
-  height: 17px;
-  accent-color: #f26a02;
 }
 .method .method-price {
   font-weight: 700;
@@ -78,10 +73,6 @@
   border: 2px solid hsl(219, 9%, 45%);
   outline: none;
 }
-.input-group input:valid + span.placeholder, .input-group input:focus + span.placeholder {
-  transform: scale(0.9) translateY(-27px);
-  background: #fff;
-}
 .input-group .placeholder {
   position: absolute;
   margin: 17px 0;
@@ -92,9 +83,11 @@
   font-size: 16px;
   left: 40px;
   transition: all 0.2s;
+  transform: scale(0.9) translateY(-27px);
   transform-origin: 0% 0%;
-  background: none;
+  background: transparent;
   pointer-events: none;
+  background: hsl(0, 0%, 100%);
 }
 .input-group .warning {
   position: absolute;
@@ -103,6 +96,69 @@
   bottom: -25px;
 }
 
+.payment .payment-name {
+  font-weight: 700;
+}
+.payment .payment-icon {
+  border: 2px solid hsl(219, 9%, 45%);
+  width: 34px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+.payment .paypal {
+  cursor: pointer;
+  width: 100%;
+  border: 2px solid hsl(219, 9%, 45%);
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-start;
+  line-height: 18px;
+  justify-content: space-between;
+}
+.payment .paypal .paypal-explain {
+  font-size: 13px;
+  width: -moz-max-content;
+  width: max-content;
+  flex-basis: 60%;
+}
+.payment .credit-card {
+  cursor: pointer;
+  width: 100%;
+  border: 2px solid hsl(219, 9%, 45%);
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 45px;
+}
+.payment .credit-card .input-name {
+  display: flex;
+  gap: 8px;
+}
+.payment .credit-card .visible, .payment .credit-card .visible .icons {
+  display: flex;
+  justify-content: space-between;
+}
+.payment .credit-card .visible .icons {
+  gap: 2px;
+}
+.payment .credit-card .card-inputs {
+  margin-top: 35px;
+}
+.payment .paypal.selected, .payment .credit-card.selected {
+  border-color: hsl(26, 98%, 55%);
+}
+
 .checkout {
   padding-bottom: 100px;
+}
+
+input[type=radio] {
+  width: 17px;
+  height: 17px;
+  accent-color: #f26a02;
 }/*# sourceMappingURL=checkout.css.map */

@@ -24,9 +24,7 @@ const schema = z.object({
         .email('Invalid email format'),
     zipCode: z.string()
         .nonempty('Zip Code is required')
-        // .max(9 ,'Invalid Zip Code')
         .refine(zip=> mask(zip, ['99999-999'])),
-        // .refine(zip=> !isNaN(zip), 'Invalid Zip Code'),
     street: z.string()
       .nonempty('Address is required')
       .transform(street=> capitalize(street)),
@@ -35,9 +33,17 @@ const schema = z.object({
     city: z.string()
         .nonempty('City is required'),
     phone: z.string()
-        .nonempty('Phone number is required')
-        .refine(zip=> mask(zip, ['99 99999-999'])),
-    methodRadio: z.string()
+        .nonempty('Phone number is required'),
+    methodRadio: z.string(),
+    paymentRadio: z.string(),
+    cardNumber: z.string()
+        .nonempty('Card number is required'),
+    cardExpirationDate: z.string()
+        .nonempty('Expiration date is required'),
+    cardCVV: z.string()
+        .nonempty('Security code is required'),
+
+    
 })
 
 export default schema

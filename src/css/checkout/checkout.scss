@@ -8,10 +8,15 @@ $orange: hsl(26, 98%, 55%);
 $red: rgb(235, 68, 68);
 $pale-orange: hsl(25, 100%, 94%);
 
-@import 'shipping', 'methods', 'info-block', 'input-group';
+@import 'shipping', 'methods', 'info-block', 'input-group', 'payment';
 
 
 .checkout{
     padding-bottom: 100px;
 }
 
+input[type="radio"]{
+    width: 17px;
+    height: 17px;
+    accent-color: darken($orange, 7);
+}

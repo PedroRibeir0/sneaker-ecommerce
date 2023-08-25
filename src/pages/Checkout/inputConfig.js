@@ -58,6 +58,26 @@ const inputConfig = {
             maxDays: 10,
             id: 'm2'
         },
+    ],
+    payment: [
+        {
+            placeholder: 'Card Number',
+            id: 'cardNumber',
+            type: 'text',
+            mask: '9999 9999 9999 9999'
+        },
+        {
+            placeholder: 'Card Expiration Date',
+            id: 'cardExpirationDate',
+            type: 'text',
+            mask: '99/99'
+        },
+        {
+            placeholder: 'Card Security Code',
+            id: 'cardCVV',
+            type: 'password',
+            mask: '999'
+        },
     ]
 }
 
