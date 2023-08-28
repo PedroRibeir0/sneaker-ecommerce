@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import {BiMinus, BiPlus} from 'react-icons/bi'
 import {BsCart3} from 'react-icons/bs'
 

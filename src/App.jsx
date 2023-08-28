@@ -6,7 +6,7 @@ import { useState } from "react"
 export default function App() {
 
     const [amount, setAmount] = useState(0)
-    const [count, setCount] = useState(0)
+    const [count, setCount] = useState(1)
   
     const plus = ()=> setCount(count + 1)
     const minus = ()=> {
@@ -26,7 +26,7 @@ export default function App() {
         trash={e=>setAmount(0)}
         />
         <Outlet
-        context={[amount, count, plus, minus, sendToCart]}
+        context={[amount, setAmount, count, plus, minus, sendToCart]}
         />
     </div>
   )

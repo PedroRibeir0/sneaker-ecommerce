@@ -8,7 +8,7 @@ $orange: hsl(26, 98%, 55%);
 $red: rgb(235, 68, 68);
 $pale-orange: hsl(25, 100%, 94%);
 
-@import 'shipping', 'methods', 'info-block', 'input-group', 'payment';
+@import 'shipping', 'methods', 'info-block', 'input-group', 'payment', 'order-review';
 
 
 .checkout{

@@ -1,0 +1,76 @@
+.order-review{
+    
+    .order{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        picture{
+            width: 80px;
+            height: 80px;
+
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: 8px;
+            }
+        }
+
+        .name-buttons{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 45%;
+
+            .buttons{
+
+                span{
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                button{
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 5px;
+                    background-color: transparent;
+                    border: none;
+                    border: 2px solid transparentize($color: $dark-grayish-blue, $amount: 0.4);
+                    font-size: 17px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+
+        .price{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: flex-end;
+
+            .price{
+                display: flex;
+                align-items: flex-end;
+                flex-direction: column;
+                gap: 2px;
+            }
+
+            .old-price{
+                font-weight: 500;
+                color: $grayish-blue;
+                text-decoration: line-through;
+            }
+
+            .current-price{
+                font-weight: 700;
+                font-size: 19px;
+            }
+        }
+    }
+}

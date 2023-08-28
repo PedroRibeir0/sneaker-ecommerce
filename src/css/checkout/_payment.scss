@@ -29,6 +29,7 @@
             font-size: 13px;
             width: max-content;
             flex-basis: 60%;
+            color: $dark-grayish-blue;
         }
     }
 
@@ -40,7 +41,6 @@
         border-radius: 10px;
         display: flex;
         flex-direction: column;
-        padding-bottom: 45px;
 
         .input-name{
             display: flex;
@@ -59,6 +59,7 @@
 
         .card-inputs{
             margin-top: 35px;
+            margin-bottom: 45px;
         }
     }
     
@@ -66,6 +67,29 @@
     .paypal, .credit-card{
         &.selected{
             border-color: $orange;
+        }
+    }
+
+    .safe{
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        .lock-icon{
+            color: $orange;
+            border: 1px solid $orange;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            padding: 3px;
+        }
+
+        span{
+            width: 90%;
+            font-size: 14px;
+            color: $dark-grayish-blue;
         }
     }
 

@@ -7,7 +7,7 @@ import { useOutletContext } from 'react-router-dom'
 
 export default function Home() {
 
-  const [amount, count, plus, minus, sendToCart] = useOutletContext()
+  const [count, plus, minus, sendToCart]= useOutletContext().slice(2)
 
   return (
     <div className='home'>
