@@ -39,6 +39,7 @@
     }
 
     .checkbox-group{
+        position: relative;
         display: flex;
         align-items: flex-start;
         gap: 5px;
@@ -52,6 +53,39 @@
                     text-decoration: underline;
                 }
             }
+        }
+
+        .warning{
+            position: absolute;
+            font-size: 15px;
+            color: $red;
+            bottom: -25px;
+          }
+    }
+
+    .submit-button{
+        flex-grow: 2;
+        background-color: $orange;
+        border: none;
+        display: inline;
+        height: 55px;
+        border-radius: 10px;
+        color: $white;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-size: 17px;
+        box-shadow: 0 5px 20px 5px rgba(255, 60, 0, 0.3);
+        cursor: pointer;
+
+        &:hover{
+            background-color: lighten($color: $orange, $amount: 8);
+        }
+
+        &:active{
+            transform: scale(0.98);
         }
     }
 }

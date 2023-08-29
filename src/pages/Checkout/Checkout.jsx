@@ -71,7 +71,6 @@ export default function Checkout() {
         register={register}
         errors={errors}
       />
-      <button type='submit'>SUBMIT</button>
     </form>
   )
 }

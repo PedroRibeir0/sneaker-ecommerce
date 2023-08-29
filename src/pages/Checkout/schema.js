@@ -40,6 +40,10 @@ const schema = z.object({
         .nonempty('Expiration date is required'),
     cardCVV: z.string()
         .nonempty('Security code is required'),
+    comment: z.string().optional(),
+    terms: z.boolean()
+        .refine(terms=> terms, 'You need to accept the terms')
+        
 
     
 })

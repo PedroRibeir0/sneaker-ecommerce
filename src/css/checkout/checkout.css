@@ -270,6 +270,7 @@
   margin-bottom: 30px;
 }
 .summary .checkbox-group {
+  position: relative;
   display: flex;
   align-items: flex-start;
   gap: 5px;
@@ -282,9 +283,38 @@
 .summary .checkbox-group label strong:hover {
   text-decoration: underline;
 }
+.summary .checkbox-group .warning {
+  position: absolute;
+  font-size: 15px;
+  color: rgb(235, 68, 68);
+  bottom: -25px;
+}
+.summary .submit-button {
+  flex-grow: 2;
+  background-color: hsl(26, 98%, 55%);
+  border: none;
+  display: inline;
+  height: 55px;
+  border-radius: 10px;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 17px;
+  box-shadow: 0 5px 20px 5px rgba(255, 60, 0, 0.3);
+  cursor: pointer;
+}
+.summary .submit-button:hover {
+  background-color: #fd9444;
+}
+.summary .submit-button:active {
+  transform: scale(0.98);
+}
 
 .checkout {
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 }
 
 input[type=radio], input[type=checkbox] {

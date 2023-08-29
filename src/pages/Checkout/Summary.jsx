@@ -4,6 +4,7 @@ import InputGroup from './InputGroup'
 export default function Summary({amount, oldPrice, currentPrice, discount, selectedMethod, register, errors}) {
 
     let shippingPrice  = selectedMethod == 0 ? 4.99 : 9.00
+    let total = amount*currentPrice + shippingPrice
 
     function dollar(value){
         return value.toLocaleString("en-US", {
@@ -43,7 +44,7 @@ export default function Summary({amount, oldPrice, currentPrice, discount, selec
         </ul>
         <div className='grand-total'>
             <span>Grand Total</span>
-            <span>{dollar(amount*currentPrice + shippingPrice)}</span>
+            <span>{dollar(total)}</span>
         </div>
         <div className='inputs-container'>
             <InputGroup
@@ -63,7 +64,16 @@ export default function Summary({amount, oldPrice, currentPrice, discount, selec
                 <label htmlFor='terms'>
                     Please check to acknowledge our <strong>Privacy & Terms Policy</strong>
                 </label>
+                {errors.terms && 
+                <span className='warning'>
+                    {errors.terms.message}
+                </span>
+                }
             </div>
+            <button type='submit' className='submit-button'>
+                <span>Pay</span>
+                <span>{dollar(total)}</span>
+            </button>
         </div>
     </section>
   )
