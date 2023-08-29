@@ -1,6 +1,4 @@
 .summary{
-
-
     .summary-list{
         display: flex;
         flex-direction: column;
@@ -17,12 +15,21 @@
                 color: $dark-grayish-blue;
                 font-size: 17px;
                 font-weight: 500;
+
+                @media screen and (min-width: 768px){
+                    font-size: 20px;
+                }
+                
             }
 
             .value{
                 color: darken($color: $very-dark-blue, $amount: 10);
                 font-weight: 500;
                 font-size: 17px;
+
+                @media screen and (min-width: 768px){
+                    font-size: 20px;
+                }
             }
         }
     }
@@ -36,6 +43,10 @@
         font-weight: 700;
         font-size: 20px;
         margin-bottom: 30px;
+
+        @media screen and (min-width: 768px){
+            font-size: 28px;
+        }
     }
 
     .checkbox-group{
@@ -43,8 +54,15 @@
         display: flex;
         align-items: flex-start;
         gap: 5px;
-
+        @media screen and (min-width: 768px){
+            gap: 10px;
+        }
+        
         label{
+
+            @media screen and (min-width: 768px){
+                font-size: 19px;
+            }
             strong{
                 color: $orange;
                 font-weight: 500;
@@ -75,10 +93,15 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 8px;
+        gap: 5px;
         font-size: 17px;
         box-shadow: 0 5px 20px 5px rgba(255, 60, 0, 0.3);
         cursor: pointer;
+
+        @media screen and (min-width: 768px){
+            height: 65px;
+            font-size: 18px;
+        }
 
         &:hover{
             background-color: lighten($color: $orange, $amount: 8);

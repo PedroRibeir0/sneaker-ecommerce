@@ -2,7 +2,7 @@ import InputGroup from './InputGroup'
 
 export default function Shipping({config, register, errors}) {
   return (
-    <section className='info-block'>
+    <section className='info-block shipping'>
     <h2>shipping address</h2>
     <div className='inputs-container'>
       {config.map(input=>{

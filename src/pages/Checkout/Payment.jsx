@@ -11,13 +11,15 @@ export default function Payment({config, register, errors, selectedPayment, setS
             onClick={e=>{
               setSelectedPayment(0)
             }}>
-            <input 
-            type="radio" 
-            value={'paypal'}
-            {...register('paymentRadio')}
-            checked={selectedPayment == 0} 
-            />
-            <span className='payment-name'>Paypal</span>
+            <div className="input-name">
+              <input
+              type="radio"
+              value={'paypal'}
+              {...register('paymentRadio')}
+              checked={selectedPayment == 0}
+              />
+              <span className='payment-name'>Paypal</span>
+            </div>
             <span className='paypal-explain'>
               You will be redirected to the PayPal website 
             </span>

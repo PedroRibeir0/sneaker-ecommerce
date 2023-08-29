@@ -19,9 +19,19 @@ input[type="radio"], input[type="checkbox"]{
     width: 17px;
     height: 17px;
     accent-color: darken($orange, 7);
+
+    @media screen and (min-width: 768px){
+        width: 19px;
+        height: 19px;
+    }
 }
 
 input[type="checkbox"]{
     width: 20px;
     height: 20px;
+
+    @media screen and (min-width: 768px){
+        width: 23px;
+        height: 23px;
+    }
 }

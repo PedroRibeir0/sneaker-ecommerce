@@ -5,7 +5,9 @@
     justify-content: center;
     align-items: flex-start;
     gap: 8px;
-  
+
+    
+
     input {
       font-size: 16px;
       color: $very-dark-blue;
@@ -14,6 +16,11 @@
       border-radius: 10px;
       border: 2px solid $dark-grayish-blue;
       outline: none;
+
+      @media screen and (min-width: 768px){
+        padding: 16px 15px;
+        font-size: 20px;
+      }
     }
   
     .placeholder {
@@ -23,7 +30,7 @@
       color: $dark-grayish-blue;
       display: flex;
       align-items: center;
-      font-size: 16px;
+      font-size: 15px;
       left: 40px;
       transition: all 0.2s;
       transform: scale(0.9) translateY(-27px);
@@ -32,6 +39,10 @@
       pointer-events: none;
       background: $white;
 
+      @media screen and (min-width: 768px){
+        font-size: 17px;
+        transform: translateY(-31px);
+      }
     }
 
     .warning{
@@ -39,5 +50,9 @@
       font-size: 15px;
       color: $red;
       bottom: -25px;
+
+      @media screen and (min-width: 768px){
+        font-size: 16px;
+      }
     }
   }
