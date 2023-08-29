@@ -1,0 +1,57 @@
+.summary{
+
+
+    .summary-list{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        list-style: none;
+        margin-bottom: 30px;
+
+        li{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+
+            .key{
+                color: $dark-grayish-blue;
+                font-size: 17px;
+                font-weight: 500;
+            }
+
+            .value{
+                color: darken($color: $very-dark-blue, $amount: 10);
+                font-weight: 500;
+                font-size: 17px;
+            }
+        }
+    }
+
+    .grand-total{
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid transparentize($color: $dark-grayish-blue, $amount: 0.7);
+        padding-top: 30px;
+        color: $black;
+        font-weight: 700;
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    .checkbox-group{
+        display: flex;
+        align-items: flex-start;
+        gap: 5px;
+
+        label{
+            strong{
+                color: $orange;
+                font-weight: 500;
+                cursor: pointer;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

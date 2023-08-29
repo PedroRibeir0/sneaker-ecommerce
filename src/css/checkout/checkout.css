@@ -237,12 +237,63 @@
   font-size: 19px;
 }
 
+.summary .summary-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+  margin-bottom: 30px;
+}
+.summary .summary-list li {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.summary .summary-list li .key {
+  color: hsl(219, 9%, 45%);
+  font-size: 17px;
+  font-weight: 500;
+}
+.summary .summary-list li .value {
+  color: #070709;
+  font-weight: 500;
+  font-size: 17px;
+}
+.summary .grand-total {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgba(104, 112, 125, 0.3);
+  padding-top: 30px;
+  color: hsl(0, 0%, 0%);
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.summary .checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+}
+.summary .checkbox-group label strong {
+  color: hsl(26, 98%, 55%);
+  font-weight: 500;
+  cursor: pointer;
+}
+.summary .checkbox-group label strong:hover {
+  text-decoration: underline;
+}
+
 .checkout {
   padding-bottom: 100px;
 }
 
-input[type=radio] {
+input[type=radio], input[type=checkbox] {
   width: 17px;
   height: 17px;
   accent-color: #f26a02;
+}
+
+input[type=checkbox] {
+  width: 20px;
+  height: 20px;
 }/*# sourceMappingURL=checkout.css.map */

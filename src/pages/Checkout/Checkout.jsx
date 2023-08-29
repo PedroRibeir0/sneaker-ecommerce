@@ -68,6 +68,8 @@ export default function Checkout() {
         oldPrice={oldPrice}
         currentPrice={currentPrice}
         selectedMethod={selectedMethod}
+        register={register}
+        errors={errors}
       />
       <button type='submit'>SUBMIT</button>
     </form>

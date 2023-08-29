@@ -1,5 +1,4 @@
-import { nullable, z } from "zod"
-import { mask, unMask } from 'remask'
+import { z } from "zod"
 
 function capitalize(string){
     string = string
@@ -23,8 +22,7 @@ const schema = z.object({
         .nonempty('Email is required')
         .email('Invalid email format'),
     zipCode: z.string()
-        .nonempty('Zip Code is required')
-        .refine(zip=> mask(zip, ['99999-999'])),
+        .nonempty('Zip Code is required'),
     street: z.string()
       .nonempty('Address is required')
       .transform(street=> capitalize(street)),
