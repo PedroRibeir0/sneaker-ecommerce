@@ -36,6 +36,7 @@ export default function Checkout() {
       className='checkout' 
       onSubmit={handleSubmit(data=>console.log(data))}
     >
+    <div>
       <Shipping
         config={inputConfig.shipping}
         register={register}
@@ -55,6 +56,8 @@ export default function Checkout() {
         selectedPayment={selectedPayment}
         setSelectedPayment={setSelectedPayment}
       />
+    </div>
+    <div>
       <OrderReview
         name={name}
         amount={amount}
@@ -71,6 +74,7 @@ export default function Checkout() {
         register={register}
         errors={errors}
       />
+    </div>
     </form>
   )
 }

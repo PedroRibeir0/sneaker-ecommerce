@@ -43,9 +43,6 @@ const schema = z.object({
     comment: z.string().optional(),
     terms: z.boolean()
         .refine(terms=> terms, 'You need to accept the terms')
-        
-
-    
 })
 
 export default schema

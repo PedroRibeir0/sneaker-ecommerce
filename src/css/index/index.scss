@@ -20,3 +20,9 @@ $orange: hsl(26, 98%, 55%);
 $pale-orange: hsl(25, 100%, 94%);
 
 @import 'header', 'cart';
+
+.app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
